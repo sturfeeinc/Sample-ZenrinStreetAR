@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1196402379086970}
+  m_IsPrefabAsset: 1
+--- !u!1 &1196402379086970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4983535403175766}
+  - component: {fileID: 114596071482840558}
+  - component: {fileID: 114171824554619794}
+  - component: {fileID: 114622575250574894}
+  - component: {fileID: 114361266094467222}
+  m_Layer: 0
+  m_Name: DebugProvider Set
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4983535403175766
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196402379086970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114171824554619794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196402379086970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964f7c5ecc4064ee5b0176b4f9cde687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TestOrientation: {x: 354.6, y: 148.932, z: 0}
+  TestPosition: {x: 0, y: 0, z: 0}
+  ProviderStatus: 1
+  _moveOrientation: 1
+--- !u!114 &114361266094467222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196402379086970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca75d13020ef04b719220d93f9d73c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Height: 720
+  Width: 1280
+  PortraitMode: 0
+  TestImage: {fileID: 2800000, guid: 5894c5841749f46f193857bdd985ccf9, type: 3}
+  ProviderStatus: 1
+--- !u!114 &114596071482840558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196402379086970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a63c09b3267f456398807ec40687d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImuProvider: {fileID: 114171824554619794}
+  GpsProvider: {fileID: 114622575250574894}
+  VideoProvider: {fileID: 114361266094467222}
+--- !u!114 &114622575250574894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196402379086970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88702be461382419580ff9447cf25cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LastKnownLatitude: 0
+  LastKnownLongitude: 0
+  LastKnownHeight: 0
+  Latitude: 37.779044
+  Longitude: -122.416594
+  Height: 0
+  ProviderStatus: 1
+  Delay: 0
+  SetLastKnownGps: 0

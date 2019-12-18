@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sturfee.Unity.XR.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Sturfee.Unity.XR.Core.Constants.DefaultTileType">
+            <summary>
+            Provides IDs for default Sturfee Tile types
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Constants.ErrorMessages">
+            <summary>
+            Error messages.
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.NoCoverageArea">
+            <summary>
+            Error message when current GPS is in no coverage area.
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.NotAuthorizedToken">
+            <summary>
+            Error message when token is not authorized.
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.NoConnectivity">
+            <summary>
+            Error message when there is no connectivity to internet.
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.NoXRCamera">
+            <summary>
+            Error message when XRCamera is not found in the scene.
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.GpsNotAvailable">
+            <summary>
+            Error message when GPS is not available
+            </summary>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Constants.ErrorMessages.GpsPositionNull">
+            <summary>
+            Error message when GetGPSPosition of GpsProvider returns null.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnSessionReady">
+            <summary>
+            Fires when Sturfee XR Session is initialized and ready.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnSessionFailed">
+            <summary>
+            Fires when Sturfee XR Session initialization fails.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationSuccessful">
+            <summary>
+            Fires after localization request is successful
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationLoading">
+            <summary>
+            Fires when alignment request is made.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationFail">
+            <summary>
+            Fires when localization request fails.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointComplete">
+            <summary>
+            Fires after hitscan finishes with a target.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointLoading">
+            <summary>
+            Fires after hitscan request is made.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointFailed">
+            <summary>
+            Fires when hitscan request doesn't hit any object
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnCoverageCheckComplete">
+            <summary>
+            Fires when Alignmnet Check request is complete
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnTileDownloaded">
+            <summary>
+            Fires when tile data has been loaded into the scene
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnAllTilesDownloaded">
+            <summary>
+            Event filred when all the tiles are donloaded
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnRequestAddedForScan">
+            <summary>
+            Fires when a request is captured during localization scan
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnSessionReady_Internal">
+            <summary>
+            Fires when Sturfee XR Session is initialized and ready.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnSessionFailed_Internal">
+            <summary>
+            Fires when Sturfee XR Session initialization fails.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationSuccessful_Internal">
+            <summary>
+            Fires after localization request is successful.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationFail_Internal">
+            <summary>
+            Fires when Localization request fails.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnLocalizationLoading_Internal">
+            <summary>
+            Fires when alignment request is made.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointComplete_Internal">
+            <summary>
+            Fires after hitscan finishes with a target.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointLoading_Internal">
+            <summary>
+            Fires after hitscan request is made.
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnDetectSurfacePointFailed_Internal">
+            <summary>
+            Fires when hitscan request doesn't hit any object
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnCoverageCheckComplete_Internal">
+            <summary>
+            Fires when Alignmnet Check request is complete
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnTileDownloaded_Internal">
+            <summary>
+            Fires when tile data has been loaded into the scene
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnRequestAddedForScan_Internal">
+            <summary>
+            Fires when a request is captured during multiframe localization scan
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnInitialTilesLoaded">
+            <summary>
+            Fires when the initial tile data around the user has been loaded into the scene
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnInitialTilesFailed">
+            <summary>
+            Fires when the initial tile data around the user failed to load
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnInitialTilesPositioned">
+            <summary>
+            Fires when the initial tile data around the user has been loaded into the scene
+            </summary>
+        </member>
+        <member name="E:Sturfee.Unity.XR.Core.Events.SturfeeEventManager.OnInitialElevationFound">
+            <summary>
+            Fires when the initial tile data around the user has been loaded into the scene
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.SessionReadyAction">
+            <summary>
+            Event that is fired when the session is initialized
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.SessionFailedAction">
+            <summary>
+            Event that is fired when the session failed to initialize
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.LocalizationSuccessfulAction">
+            <summary>
+            Event fired after successful localization
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.LocalizationLoadingAction">
+            <summary>
+            Event that is fired when alignment is waiting response from VPS service.
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.LocalizationFailAction">
+            <summary>
+            Event that is fired when alignment fails.
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.DetectSurfacePointCompleteAction">
+            <summary>
+            Event that is fired after a DetectSurfacePoint call is complete
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.DetectSurfacePointErrorAction">
+            <summary>
+            Event that is fired when DetectSurfacePoint call fails
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.DetectSurfacePointLoadingAction">
+            <summary>
+            Event that is fired when DetectSurfacePoint call is made
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.CoverageCheckCompleteAction">
+            <summary>
+            Event fired when Coverage Check request is complete
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.TileDownloadedAction">
+            <summary>
+            Event that is fired when a tile is loaded
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.MultiframeLocalizationAction">
+            <summary>
+            Event that is fired when a request is captured during multiframe localization scan
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.OnAllTilesDownloadedAction">
+            <summary>
+            Event that is fired when all the tiles are loaded
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.InitialTilesLoadedAction">
+            <summary>
+            Event that is fired when initial tiles around the user are loaded
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.InitialTilesFailedAction">
+            <summary>
+            Event that is fired when initial tiles around the user failed to load
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.InitialTilesPositionedAction">
+            <summary>
+            Event that is fired when initial tiles around the user are positioned
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Events.SturfeeEvents.InitialElevationFoundAction">
+            <summary>
+            Event that is fired when initial tiles around the user are positioned
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Features.SturfeeSubscriptionManager">
+            <summary>
+            Provides some methods to check the Sturfee subscription details
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Features.SturfeeSubscriptionManager.GetSubscriptionInfo(System.String)">
+            <summary>
+            Returns the subscription details for the provided token.
+            </summary>
+            <param name="accessToken">Access Token to check</param>
+            <returns>SturfeeSubscriptionInfo object</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Features.SturfeeSubscriptionManager.GetSubscription(System.String,System.Action{Sturfee.Unity.XR.Core.Features.SturfeeSubscriptionInfo},System.Action{System.String})">
+            <summary>
+            Validates the subscription details with the server
+            </summary>
+            <param name="accessToken"></param>
+            <param name="callback"></param>
+            <param name="errorCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.GetXRCameraPosition">
+            <summary>
+            Gets position for XR Camera in Unity world coordinates
+            </summary>
+            <returns>The position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.GetXRCameraOrientation">
+            <summary>
+            Gets orientation for XR Camera in Unity world coordinates
+            </summary>
+            <returns>The orientation.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.GetLocationCorrection">
+            <summary>
+            Gets the location correction after localization is performed. Before localization returns null.
+            </summary>
+            <returns>The location correction.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.GetOrientationCorrection">
+            <summary>
+            Gets the offset for orientation correction after localization is performed. Before localization return Identity quaternion
+            </summary>
+            <returns>The offset for orientation correction.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.PerformLocalization(System.Int32)">
+            <summary>
+            Performs the localization using Sturfee VPS.
+            </summary>
+            <param name="requestLength">Request length. Number of frames during scan</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.CheckCoverage">
+            <summary>
+            Checks VPS coverage for current location
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.DetectSurfaceAtPoint(UnityEngine.Vector2)">
+            <summary>
+            Performs a server-side raycast for detecting surfaces
+            </summary>
+            <param name="screenPosition">Point on screen to raycast from (screen coordinates)</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.ForceLocationUpdate(Sturfee.Unity.XR.Core.Models.Location.GpsPosition)">
+            <summary>
+            Forces Session to update the user's location from the passed in GPS location (by default this will use IGpsProvider)
+            </summary>
+            <param name="gps">GPS location to update to (if not provided, IGpsProvider of the Session will be used)</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSession_Internal.ForcePositionUpdate(UnityEngine.Vector3,System.Boolean)">
+            <summary>
+            Forces Session to use the position parameter for the XR Camera
+            </summary>
+            <param name="position">Position that XR Camera should take</param>
+            <param name="overrideElevation">Set to 'true' is position should ignore terrain raycasting</param>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Session.XRSessionManager">
+            <summary>
+            XR Session manager. Main Entry point to Sturfee's VPS Service
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Sturfee.Unity.XR.Core.Session.XRSessionManager.CreateSessionWithConfig(Sturfee.Unity.XR.Core.Session.XRSessionConfig)" -->
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetSession">
+            <summary>
+            Gets the current active Sturfee XR session
+            </summary>
+            <returns>The session.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.DestroySession">
+            <summary>
+            Destroy current XR Session
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetXRCameraPosition">
+            <summary>
+            Gets position for XR Camera in Unity world coordinates
+            </summary>
+            <returns>The position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetXRCameraOrientation">
+            <summary>
+            Gets orientation for XR Camera in Unity world coordinates
+            </summary>
+            <returns>The orientation.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetXRCameraLocation">
+            <summary>
+            Gets position for XR Camera in GPS Coordinate system
+            </summary>
+            <returns>The GPS location.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetLocationCorrection">
+            <summary>
+            Gets the location correction after localization is performed. Before localization returns null.
+            </summary>
+            <returns>The location correction.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GetOrientationCorrection">
+            <summary>
+            Gets the offset for orientation correction after localization is performed. Before localization return Identity quaternion
+            </summary>
+            <returns>The offset for orientation correction.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.GpsToLocalPosition(Sturfee.Unity.XR.Core.Models.Location.GpsPosition)">
+            <summary>
+            Converts GPS data into local coordinates, using Sturfee's tile system.
+            </summary>
+            <param name="gps">The GPS position to be converted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.LocalPositionToGps(UnityEngine.Vector3)">
+            <summary>
+            Converts local coordinates to GPS lat/long, using Sturfee's tile system.
+            </summary>
+            <param name="localPosition">The local position to be converted</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.PerformLocalization(System.Int32)">
+            <summary>
+            Performs the localization using Sturfee VPS.
+            </summary>
+            <param name="requestLength">Request length. Number of frames during scan</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.CheckCoverage">
+            <summary>
+            Checks VPS coverage for current location
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.DetectSurfaceAtPoint(UnityEngine.Vector2)">
+            <summary>
+            Performs a server-side raycast for detecting surfaces
+            </summary>
+            <param name="screenPosition">Point on screen to raycast from (screen coordinates)</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.ForceLocationUpdate(Sturfee.Unity.XR.Core.Models.Location.GpsPosition)">
+            <summary>
+            Forces Session to update the user's location from the passed in GPS location (by default this will use IGpsProvider)
+            </summary>
+            <param name="gps">GPS location to update to (if not provided, IGpsProvider of the Session will be used)</param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.XRSessionManager.ForcePositionUpdate(UnityEngine.Vector3,System.Boolean)">
+            <summary>
+            Forces Session to use the position parameter for the XR Camera
+            </summary>
+            <param name="position">Position that XR Camera should take</param>
+            <param name="overrideElevation">Set to 'true' is position should ignore terrain raycasting</param>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Session.SessionPreRequisites">
+            <summary>
+            This class checks for all the prerequisites before creating Session. 
+            Prerequisites include : Token check, Internet check
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Session.SessionPreRequisites.CheckPreRequisites(System.Action,System.Action{System.String})">
+            <summary>
+            Checks for Token validity and Internet availability.
+            </summary>
+            <param name="callback">Callback.</param>
+            <param name="errorCallback">Error callback.</param>
+        </member>
+        <member name="F:Sturfee.Unity.XR.Core.Tile.TileConstants.TileSize">
+            <summary>
+            Size (2D) of Sturfee Tile in Meters
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Tile.Model.TileType">
+            <summary>
+            Type of tiles supported by Sturfee
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Tile.SturfeeUnityTile">
+            <summary>
+            A 3D tile object
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Tile.Providers.SturfeeTileProvider">
+            <summary>
+            This provider is responsible for fetching tile data from the server
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Tile.Utilities.NormalSolver.RecalculateNormals(UnityEngine.Mesh,System.Single)">
+            <summary>
+                Recalculate the normals of a mesh based on an angle threshold. This takes
+                into account distinct vertices that have the same position.
+            </summary>
+            <param name="mesh"></param>
+            <param name="angle">
+                The smoothing angle. Note that triangles that already share
+                the same vertex will be smooth regardless of the angle! 
+            </param>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Tile.TilePrerequisites.CheckPreRequisites(System.Action,System.Action{System.String})">
+            <summary>
+            Checks for Token validity and Internet availability.
+            </summary>
+            <returns>The pre requisites.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Token.TokenValidation.ValidateToken(System.String)">
+            <summary>
+            Checks for token format and sets the Tenant
+            </summary>
+            <returns>The token.</returns>
+            <param name="accessToken">Access token.</param>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Utilities.CoroutineUtils">
+            <summary>
+            Utility functions to handle exceptions thrown from coroutine and iterator functions
+            http://JacksonDunstan.com/articles/3718
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Utilities.CoroutineUtils.StartThrowingCoroutine(UnityEngine.MonoBehaviour,System.Collections.IEnumerator,System.Action{System.Exception})">
+            <summary>
+            Start a coroutine that might throw an exception. Call the callback with the exception if it
+            does or null if it finishes without throwing an exception.
+            </summary>
+            <param name="monoBehaviour">MonoBehaviour to start the coroutine on</param>
+            <param name="enumerator">Iterator function to run as the coroutine</param>
+            <param name="done">Callback to call when the coroutine has thrown an exception or finished.
+            The thrown exception or null is passed as the parameter.</param>
+            <returns>The started coroutine</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Utilities.CoroutineUtils.RunThrowingIterator(System.Collections.IEnumerator,System.Action{System.Exception})">
+            <summary>
+            Run an iterator function that might throw an exception. Call the callback with the exception
+            if it does or null if it finishes without throwing an exception.
+            </summary>
+            <param name="enumerator">Iterator function to run</param>
+            <param name="done">Callback to call when the iterator has thrown an exception or finished.
+            The thrown exception or null is passed as the parameter.</param>
+            <returns>An enumerator that runs the given enumerator</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Interfaces.IProviderState">
+            <summary>
+            Determines if the provider supports the device it is running on.
+            </summary>
+            <returns><c>true</c> if the device is supported; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IProviderState.Destroy">
+            <summary>
+            Destroy any Objects/GameObjects that were cretaed using this provider
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IProviderState.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Interfaces.IGpsProvider">
+            <summary>
+            Gps provider interface.
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IGpsProvider.GetGPSPosition">
+            <summary>
+            Gets the current GPS position.
+            </summary>
+            <returns>The GPS position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IGpsProvider.GetLastKnownGpsPosition">
+            <summary>
+            Gets the last known gps position from cache, if available.
+            </summary>
+            <returns>The last known gps position.</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Interfaces.IImuProvider">
+            <summary>
+            Imu provider interface.
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IImuProvider.GetOrientation">
+            <summary>
+            Gets the world orientation of device in unity coordinate system
+            </summary>
+            <returns>The orientation.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IImuProvider.GetOffsetPosition">
+            <summary>
+            Gets relative position in unity coordinate system
+            </summary>
+            <returns>The position.</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider">
+            <summary>
+            Video provider interface.
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.GetCurrentFrame">
+            <summary>
+            Returns current frame of video as an image
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.GetHeight">
+            <summary>
+            Gets height of the video texture
+            </summary>
+            <returns>The height.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.GetWidth">
+            <summary>
+            Gets width of the video texture
+            </summary>
+            <returns>The width.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.IsPortrait">
+            <summary>
+            Determines whether the screen orientation is portrait.
+            </summary>
+            <returns><c>true</c> if this instance is portrait; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.GetProjectionMatrix">
+            <summary>
+            Gets projection matrix of Device Camera
+            </summary>
+            <returns>The projection matrix.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Interfaces.IVideoProvider.GetFOV">
+            <summary>
+            Gets Field of View of Device Camera
+            </summary>
+            <returns>The fov.</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Base.GpsProviderBase">
+            <summary>
+            Abstract base class for GpsProvider that inherits from Monobehaviour
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.GpsProviderBase.GetGPSPosition">
+            <summary>
+            Gets the current GPS position.
+            </summary>
+            <returns>The GPS Position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.GpsProviderBase.GetLastKnownGpsPosition">
+            <summary>
+            Gets the last known gps position from cache, if available.
+            </summary>
+            <returns>The last known gps position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.GpsProviderBase.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.GpsProviderBase.Destroy">
+            <summary>
+            Destroy any Objects/GameObjects that were cretaed using this provider
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Base.ImuProviderBase">
+            <summary>
+            Abstract base class for ImuProvider that inherits from Monobehaviour
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.ImuProviderBase.GetOrientation">
+            <summary>
+            Gets the world orientation of device in unity coordinate system
+            </summary>
+            <returns>The orientation.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.ImuProviderBase.GetOffsetPosition">
+            <summary>
+            Getss relative position in unity coordinate system
+            </summary>
+            <returns>The offset position.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.ImuProviderBase.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.ImuProviderBase.Destroy">
+            <summary>
+            Destroy any Objects/GameObjects that were cretaed using this provider
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase">
+            <summary>
+            Abstract base class for VideoProvider that inherits from Monobehaviour
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetCurrentFrame">
+            <summary>
+            Determines whether this provider on this device is supported.
+            </summary>
+            <returns><c>true</c>, if this instance is supported; otherwise, <c>false</c> .</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetHeight">
+            <summary>
+            Gets height of the video texture
+            </summary>
+            <returns>The height.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetWidth">
+            <summary>
+            Gets width of the video texture
+            </summary>
+            <returns>The width.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.IsPortrait">
+            <summary>
+            Determines whether the screen orientation is portrait.
+            </summary>
+            <returns><c>true</c> if this instance is portrait; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.Destroy">
+            <summary>
+            Destroy any Objects/GameObjects that were cretaed using this provider
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetProjectionMatrix">
+            <summary>
+            Gets projection matrix of Device Camera
+            </summary>
+            <returns>The projection matrix.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Core.Providers.Base.VideoProviderBase.GetFOV">
+            <summary>
+            Gets Field of View of Device Camera
+            </summary>
+            <returns>The fov.</returns>
+        </member>
+    </members>
+</doc>

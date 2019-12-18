@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sturfee.Unity.XR.Providers</name>
+    </assembly>
+    <members>
+        <member name="T:Sturfee.Unity.XR.Providers.SturfeeGpsProvider">
+            <summary>
+            Sturfee's GpsProvider
+            </summary>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Providers.SturfeeAndroidImuProvider">
+            <summary>
+            Sturfee's Android ImuProvider.
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Providers.SturfeeAndroidImuProvider.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Providers.SturfeeIOSImuProvider.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+        <member name="T:Sturfee.Unity.XR.Providers.SturfeeVideoProvider">
+            <summary>
+            Sturfee's VideoProvider.
+            </summary>
+        </member>
+        <member name="M:Sturfee.Unity.XR.Providers.SturfeeVideoProvider.GetProviderStatus">
+            <summary>
+            Gets provider's current status
+            </summary>
+            <returns>The provider status.</returns>
+        </member>
+    </members>
+</doc>

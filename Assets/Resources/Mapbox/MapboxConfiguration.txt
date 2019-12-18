@@ -1,0 +1,1 @@
+{"AccessToken":"n/a","MemoryCacheSize":500,"FileCacheSize":2500,"DefaultTimeout":30,"AutoRefreshCache":false}
